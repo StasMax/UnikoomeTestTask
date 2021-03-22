@@ -17,10 +17,8 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <aws-java-sdk.version>1.11.290</aws-java-sdk.version>
         <lombok.version>1.18.12</lombok.version>
         <mapstruct.version>1.4.1.Final</mapstruct.version>
-        <commons-io.version>2.5</commons-io.version>
         <hibernate-validator.version>6.1.5.Final</hibernate-validator.version>
     </properties>
 
@@ -75,18 +73,6 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.5.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons-io.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk</artifactId>
-            <version>${aws-java-sdk.version}</version>
         </dependency>
 
         <dependency>

@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
             try (InputStream inputStream = multipartFile.getInputStream()) {
                 photoUrl = storageService.uploadFile(inputStream, UUID.randomUUID().toString());
             } catch (IOException e) {
-                throw new ServiceException(HttpStatus.INTERNAL_SERVER_ERROR, e);
+                throw new ServiceException("Не удалось загрузить фотографию", HttpStatus.INTERNAL_SERVER_ERROR, e);
             }
         }
 
