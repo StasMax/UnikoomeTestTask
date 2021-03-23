@@ -1,8 +1,8 @@
 package org.example.userapi.common.constants;
 
 public interface Urls {
-    String VALUE = "v1";
-    String ROOT = "/api/" + VALUE;
+    String VERSION = "v1";
+    String ROOT = "/api/" + VERSION;
 
     interface User {
         String USERS = ROOT + "/users";
@@ -11,6 +11,7 @@ public interface Urls {
             String NAME = "/{id}";
             String FULL = USERS + NAME;
         }
-
     }
+
+
 }

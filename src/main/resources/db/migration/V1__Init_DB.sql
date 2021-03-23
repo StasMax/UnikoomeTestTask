@@ -8,7 +8,9 @@ email varchar(255) not null,
 birth_date date,
 sex varchar(255),
 photo_url varchar(255),
-primary key (id)
+primary key (id),
+constraint user_name_const UNIQUE (user_name),
+constraint user_email_const UNIQUE (email)
 );
 
 

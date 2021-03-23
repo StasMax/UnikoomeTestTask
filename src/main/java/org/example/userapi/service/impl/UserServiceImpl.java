@@ -44,6 +44,10 @@ public class UserServiceImpl implements UserService {
             throw new ServiceException("Пользователь с таким именем уже существует");
         }
 
+        if (repository.existsByEmail(vm.getEmail())) {
+            throw new ServiceException("Пользователь с таким E-mail уже существует");
+        }
+
         if (!multipartFile.isEmpty()) {
             try (InputStream inputStream = multipartFile.getInputStream()) {
                 photoUrl = storageService.uploadFile(inputStream, UUID.randomUUID().toString());

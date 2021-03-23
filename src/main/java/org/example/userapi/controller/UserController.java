@@ -38,9 +38,7 @@ public class UserController {
     public UserDto createUser(
             @RequestParam("file") MultipartFile file,
             @RequestParam("user") String stringVm) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
-        UserVM vm = mapper.readValue(stringVm, UserVM.class);
-        return service.addUser(vm, file);
+        return service.addUser(new ObjectMapper().readValue(stringVm, UserVM.class), file);
     }
 
     @Operation(
